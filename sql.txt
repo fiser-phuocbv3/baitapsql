@@ -1,0 +1,20 @@
+select love1.name,user.name
+
+from  user
+
+join 
+
+(
+
+select love.ID2, user.name
+
+from love
+
+join user
+
+on user.ID = love.ID1
+
+) 
+as love1
+
+on user.ID = love1.ID2
